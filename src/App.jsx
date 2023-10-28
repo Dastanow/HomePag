@@ -3,8 +3,10 @@ import './App.css'
 import Home from './pages/Home'
 import { useEffect, useState } from 'react'
 import axios from 'axios';
+import Corthina from './components/Corthina';
 
 function App() {
+
   const [products, setProducts] = useState();
   const [filteredProducts, setfilterProduct] = useState([]);
   const [priseSort, setPriseSort] = useState();
@@ -12,7 +14,7 @@ function App() {
 
   useEffect(() => {
 const fetchData = async () => {
-  const respons = await axios.get("https://fakestoreapi.com/products");
+  const respons = await axios.get("https://api.escuelajs.co/api/v1/products");
   setProducts(respons.data);
   setfilterProduct(respons.data)
   setPriseSort(respons.data)
@@ -27,6 +29,7 @@ console.log(setProducts);
     {}
     <Routes>
       <Route path="/" element={<Home data={products} setfilterProduct={setfilterProduct} filteredProducts={filteredProducts } setPriseSort={setPriseSort} priseSort={priseSort}/>}/>
+      <Route path="/coreth" element={< Corthina/>}/>
     </Routes>
         </>
   )

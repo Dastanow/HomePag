@@ -5,12 +5,18 @@ import '../styls/home.scss'
 import Prais from '../components/Prais'
 import Heder from '../components/Heder'
 
-const Home = ({ data, setfilterProduct, filteredProducts, priseSort, setPriseSort }) => {
+const Home = ({ data, setfilterProduct, filteredProducts, priseSort, setPriseSort,  }) => {
 
   const priseData = (value) => {
     const filterPrise = data.filter((item) => 
-    item.price >= value
-
+    item.price >= value 
+    );
+    setfilterProduct(filterPrise);
+    setPriseSort(filterPrise)
+  };
+  const DataPrize = (value) => {
+    const filterPrise = data.filter((item) => 
+    item.price <= value 
     );
     setfilterProduct(filterPrise);
     setPriseSort(filterPrise)
@@ -27,7 +33,7 @@ const Home = ({ data, setfilterProduct, filteredProducts, priseSort, setPriseSor
     <div>
       <Heder/>
       <div className='buton'>
-              <Prais priseData={priseData}/>
+              <Prais priseData={priseData} DataPrize={DataPrize} />
         <Search searchProduct={searchProduct}/>
 </div>
     <div className='product'>
