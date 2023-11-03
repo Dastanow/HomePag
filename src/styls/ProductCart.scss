@@ -1,6 +1,8 @@
 .cart{
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
-    background: #fff;
+    // background: #fff;
+    background-color: #3B3B3B;
+
     width: 300px;
     height: auto;
     padding: 8px;
@@ -19,15 +21,17 @@
         padding: 6px;
     }
     .heart-_-icon{
+        color: #fff;
         font-size: 20px;
     }
     .image{
         img{
-            width: 250px;
-height: 180px;
+                width: 250px;
+    height: 180px;
         }
     }
     .cart__button{
+        color: #fff;
         h3{
             font-size: 19px;
             text-align: left;

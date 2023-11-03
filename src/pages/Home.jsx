@@ -30,7 +30,7 @@ const Home = ({ data, setfilterProduct, filteredProducts, priseSort, setPriseSor
         setfilterProduct(filteredData)
     };
   return (
-    <div>
+    <div className='color_1'>
       <Heder/>
       <div className='buton'>
               <Prais priseData={priseData} DataPrize={DataPrize} />

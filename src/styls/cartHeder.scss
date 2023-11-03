@@ -1,0 +1,11 @@
+.cart_heder{
+    background-color: rgb(79, 79, 94);
+}
+.heder_cart{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    
+    padding: 8px;
+    
+}

@@ -36,13 +36,13 @@ const Heder = () => {
             <div className='icon'>
             <AiOutlineHome style={{color: '#fff'}}/>
             <AiOutlineHeart  style={{color: '#fff'}}/>
-{/* <Link to={'/coreth'}> */}
-   <div>{totalPrise}</div> 
+<Link to={'/coreth'}>
   <span>  
-    <BsCart2  style={{color: '#fff'}}/>
+    <BsCart2  style={{color: '#fff', fontSize: ''}}/>
 </span>
-<div>    {items.length}
-</div>{/* </Link> */}
+</Link>
+  <span style={{color: '#fff', }}>{totalPrise}$</span> 
+    <span style={{color: '#fff', }}>{items.length}</span>
           
           
 

@@ -5,22 +5,26 @@ import { AiOutlineHeart } from "react-icons/ai"
 import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from '../store/slice/cartSlice';
 
+const typeNames = ['notnik', 'not']
 
-const ProductCart = ({ id, title, price, description, image}) => {
+const ProductCart = ({ id, title, price, description, images}) => {
   const dispatch = useDispatch();
+  // const cartitem = useSelector((state) => state.cart.items.find(items => items.id === id));
   const [ activType, setActivType ] = React.useState(0);
   const [ activSize, setActivSize ] = React.useState(0);
-  
+
+  // const adddont = cartitem ? cartitem.id : 0;
   const onClickAdd = () => {
     const item = {
 id,
 title,
 price,
-image,
-type: activType,
+images,
+type: typeNames[activType],
 size: activSize
     };
     dispatch(addItem(item));
+    console.log(addItem(item));
   }
   return (
     <div className='cart'>
@@ -31,7 +35,7 @@ size: activSize
             </div>
         </div>
         <div className='image'>
-        <img src={image} alt="" />
+        <img src={images} alt="" />
         </div>
         <div className='cart__button'>
             <h3>{title}</h3>
